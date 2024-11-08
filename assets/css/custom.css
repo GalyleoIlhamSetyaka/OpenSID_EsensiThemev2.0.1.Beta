@@ -1,0 +1,8 @@
+:root {
+  --primary-base-color: #003d73;      /* Strong blue - warna utama */
+  --primary-darken-color: #002c54;    /* Dark blue - header */
+  --secondary-base-color: #d4af37;    /* Classic gold - aksen */
+  --secondary-darken-color: #b4951f;  /* Darker gold - hover */
+  --accent-base-color: #006064;       /* Dark cyan - highlight */
+  --accent-darken-color: #004346;     /* Deeper cyan - hover highlight */
+}
