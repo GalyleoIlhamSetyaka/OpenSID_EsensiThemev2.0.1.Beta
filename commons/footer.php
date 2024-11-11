@@ -15,10 +15,10 @@
 <footer class="max-w-screen-xl md:px-8 lg:px-10 mx-auto bg-neutral-700">
 
   <!-- Container Grid untuk Maps dan Detail -->
-  <div class="container mx-auto p-4">
+  <div class="grid container mx-auto p-4">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 container px-3 lg:px-5 bg-neutral-700 rounded-sm overflow-hidden">
       <!-- Peta Lokasi Kantor -->
-      <div class="bg-gray-200 p-6 mb-3 order-2 z-10">
+      <div class="lokasi bg-gray-200 p-6 mb-3 order-2 z-10">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 bg-gray-700 rounded-sm overflow-hidden">
       <h3 class="text-xl font-bold text-center text-white">Lokasi Kantor</h3>
         </div>
@@ -26,7 +26,7 @@
       </div>
 
         <!-- Detail desa -->
-      <div class="text-white p-6 order-1 lg:order-2">
+      <div class="detail-desa text-white p-6 order-1 lg:order-2">
         <div class="space-y-0.2 flex flex-col items-center">
           <div class="flex items-center gap-2 justify-center">
             <img src="<?= base_url()?>desa/logo/<?= $desa['logo'] ?>" 
@@ -90,7 +90,7 @@
       </div>
 
       <!-- Peta Wilayah -->
-      <div class="bg-gray-200 p-6">
+      <div class="peta bg-gray-200 p-6">
         <div class="box-header flex items-center justify-center rounded-sm gap-2 z-10">
           <h3 class="text-xl font-bold text-white">Peta Wilayah</h3>
         </div>
@@ -179,3 +179,24 @@
     wilayah_desa.fitBounds(kantor_desa.getBounds());
   <?php endif; ?>
 </script>
+
+<style type="text/css">
+  @media (max-width: 768px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .detail-desa {
+        order: 1;
+    }
+
+    .lokasi {
+        order: 2;
+    }
+
+    .peta {
+        order: 3;
+    }
+}
+</style>
